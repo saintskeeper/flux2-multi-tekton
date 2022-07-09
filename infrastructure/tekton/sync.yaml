@@ -1,0 +1,15 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: tekton-operator
+  namespace: flux-system
+spec:
+  interval: 720m0s
+  sourceRef:
+    kind: GitRepository
+    name: tekton-auth
+  serviceAccountName: kustomize-controller
+  path: ./core/tekton/operator
+  prune: true
+  wait: true
+  timeout: 5m
