@@ -7,7 +7,7 @@ spec:
   interval: 720m0s
   sourceRef:
     kind: GitRepository
-    name: tekton-core
+    name: flux-system
   serviceAccountName: kustomize-controller
   path: ./infrastructure/tekton
   prune: true
