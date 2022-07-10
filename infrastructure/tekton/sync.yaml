@@ -9,7 +9,7 @@ spec:
     kind: GitRepository
     name: tekton-auth
   serviceAccountName: kustomize-controller
-  path: ./core/tekton/operator
+  path: ./core/tekton
   prune: true
   wait: true
   timeout: 5m
